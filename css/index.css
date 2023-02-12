@@ -13,13 +13,29 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 
-  font-family: "Merriweather", serif;
+  max-width: 36rem;
+  margin: 1em auto;
 }
 
-.name {
-  font-weight: normal;
+@keyframes blink {
+  from,
+  to {
+    background-color: transparent;
+    color: var(--text-color);
+  }
+  50% {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+}
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header-name {
+  display: inline-flex;
+  font-weight: 400;
+  font-family: "IBM Plex Mono", monospace;
+
+  > .cursor {
+    animation: 1.5s blink step-end infinite;
+    clip-path: inset(5px 1px);
+  }
 }
