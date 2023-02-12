@@ -17,23 +17,33 @@ body {
 @keyframes blink {
   from,
   to {
-    background-color: transparent;
-    color: var(--text-color);
+    opacity: 0;
   }
   50% {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    opacity: 1;
   }
 }
 
 .header-name {
+  position: relative;
   width: 80%;
   margin: 1em auto;
   font-weight: 400;
   font-family: "IBM Plex Mono", monospace;
+}
 
-  > .cursor {
-    animation: 1.5s blink step-end infinite;
-    clip-path: inset(4px 1px);
-  }
+.header-name::after {
+  content: "";
+  width: 1ch;
+  left: 7ch;
+
+  position: absolute;
+  top: 7px;
+  bottom: 5px;
+
+  background-color: #000;
+  filter: invert(1);
+  mix-blend-mode: difference;
+
+  animation: 2s blink step-end infinite;
 }
