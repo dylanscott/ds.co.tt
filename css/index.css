@@ -34,6 +34,6 @@ body {
 
   > .cursor {
     animation: 1.5s blink step-end infinite;
-    clip-path: inset(5px 1px);
+    clip-path: inset(4px 1px);
   }
 }
