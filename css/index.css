@@ -12,9 +12,6 @@ body {
 
   color: var(--text-color);
   background-color: var(--background-color);
-
-  max-width: 36rem;
-  margin: 1em auto;
 }
 
 @keyframes blink {
@@ -30,7 +27,8 @@ body {
 }
 
 .header-name {
-  display: inline-flex;
+  width: 80%;
+  margin: 1em auto;
   font-weight: 400;
   font-family: "IBM Plex Mono", monospace;
 
