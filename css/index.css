@@ -1,0 +1,15 @@
+@import url("./reset.css");
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  --duration: 0.5s;
+  --timing: ease;
+  transition: color var(--duration) var(--timing),
+    background-color var(--duration) var(--timing);
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
