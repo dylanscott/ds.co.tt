@@ -35,7 +35,7 @@ body {
 .header-name::after {
   content: "";
   width: 1ch;
-  left: 7ch;
+  left: 10ch;
 
   position: absolute;
   top: 7px;
